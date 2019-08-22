@@ -2,6 +2,13 @@ Rails.application.routes.draw do
 
   get 'about' => 'about#show'
 
+  get '/login' => 'sessions#new'
+  post '/login' => 'session#create'
+  get '/logout' => 'sessions#destroy'
+
+  get '/signup' => 'users#new' #Renders a form in the page
+  get '/users' => 'users#create' #Recieve the form and add to db
+
   root to: 'products#index'
 
   resources :products, only: [:index, :show]
