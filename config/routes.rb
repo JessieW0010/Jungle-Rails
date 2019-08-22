@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   get '/signup' => 'users#new' #Renders a form in the page
-  get '/users' => 'users#create' #Recieve the form and add to db
+  post '/users' => 'users#create' #Recieve the form and add to db
 
   root to: 'products#index'
 
