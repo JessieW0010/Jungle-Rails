@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'about' => 'about#show'
 
   get '/login' => 'sessions#new'
-  post '/login' => 'session#create'
+  post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
   get '/signup' => 'users#new' #Renders a form in the page
